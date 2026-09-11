@@ -330,7 +330,7 @@ The school aims to nurture confident, responsible and future-ready learners equi
                         <div class="hlt-card-top-bar"></div>
                         <div class="hlt-card-body">
                             <div class="hlt-card-icon-wrap">
-                                <img src="{{ asset('storage/assets/facilities-images/admission-enquiry.png') }}" alt="admissions" loading="lazy">
+                                <i class="fas fa-file-signature"></i>
                             </div>
                             <h3 class="hlt-card-title">Admission Enquiry</h3>
                             <p class="hlt-card-desc">Begin your child's journey. Apply now for the 2027-28 academic year.</p>
@@ -343,7 +343,7 @@ The school aims to nurture confident, responsible and future-ready learners equi
                         <div class="hlt-card-top-bar"></div>
                         <div class="hlt-card-body">
                             <div class="hlt-card-icon-wrap">
-                                <img src="{{ asset('storage/assets/facilities-images/blogs.png') }}" alt="blog" loading="lazy">
+                                <i class="fas fa-newspaper"></i>
                             </div>
                             <h3 class="hlt-card-title">Blogs</h3>
                             <p class="hlt-card-desc">Insights, stories and the latest news from the DCMI community.</p>
@@ -356,7 +356,7 @@ The school aims to nurture confident, responsible and future-ready learners equi
                         <div class="hlt-card-top-bar"></div>
                         <div class="hlt-card-body">
                             <div class="hlt-card-icon-wrap">
-                                <img src="{{ asset('storage/assets/facilities-images/careers.png') }}" alt="career" loading="lazy">
+                                <i class="fas fa-briefcase"></i>
                             </div>
                             <h3 class="hlt-card-title">Careers</h3>
                             <p class="hlt-card-desc">Join our team of passionate educators, innovators and changemakers.</p>
@@ -369,7 +369,7 @@ The school aims to nurture confident, responsible and future-ready learners equi
                         <div class="hlt-card-top-bar"></div>
                         <div class="hlt-card-body">
                             <div class="hlt-card-icon-wrap">
-                                <img src="{{ asset('storage/assets/facilities-images/contact.png') }}" alt="contact" loading="lazy">
+                                <i class="fas fa-headset"></i>
                             </div>
                             <h3 class="hlt-card-title">Contact Us</h3>
                             <p class="hlt-card-desc">Have a question? We're here to help and guide you every step of the way.</p>

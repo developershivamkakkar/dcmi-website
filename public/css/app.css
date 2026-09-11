@@ -2718,6 +2718,12 @@ main.hero-page { padding-top: 0; }
     filter: brightness(0) invert(1);
 }
 
+.hlt-card-icon-wrap i {
+    font-size: 2.3rem;
+    color: var(--color-text-white);
+    transition: transform 0.3s ease;
+}
+
 /* Title */
 .hlt-card-title {
     font-family: var(--font-heading);
