@@ -71,11 +71,11 @@
                                     class="text-reset text-decoration-none">{{ config('site.email_info') }}</a></p>
                         </div>
 
-                        <div class="my-2">
-                            <h5 class="fw-bold">Admissions Office:</h5>
-                            <p><i class="fas fa-envelope me-1"></i><a href="mailto:{{ config('site.email_admissions') }}"
-                                    class="text-reset text-decoration-none">{{ config('site.email_admissions') }}</a></p>
-                        </div>
+                        <!-- <div class="my-2">
+                                <h5 class="fw-bold">Admissions Office:</h5>
+                                <p><i class="fas fa-envelope me-1"></i><a href="mailto:{{ config('site.email_admissions') }}"
+                                        class="text-reset text-decoration-none">{{ config('site.email_admissions') }}</a></p>
+                            </div> -->
                         <div class="mt-2">
                             <h4 class="fw-bold">Call us:</h4>
                             <p><i class="fas fa-phone me-1"></i><a
@@ -106,8 +106,7 @@
                             @endif
                             @if (config('site.whatsapp'))
                                 <a href="https://wa.me/91{{ config('site.whatsapp') }}" target="_blank"
-                                    rel="noopener noreferrer" class="text-dark mx-2"><i
-                                        class="fab fa-whatsapp fa-2x"></i></a>
+                                    rel="noopener noreferrer" class="text-dark mx-2"><i class="fab fa-whatsapp fa-2x"></i></a>
                             @endif
                         </div>
 
@@ -122,16 +121,14 @@
                             </div>
                             <div class="mb-2 mt-1">
                                 <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
-                                <input type="name" class="form-control" id="name" placeholder="Enter name"
-                                    name="name">
+                                <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
                                 @error('name')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-2">
                                 <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter Email"
-                                    name="email">
+                                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
                                 @error('email')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -147,9 +144,9 @@
                                 @enderror
                             </div>
                             <div class="mb-2">
-                                <label for="message" class="form-label">Message<span
-                                        class="text-danger">*</span></label>
-                                <textarea type="message" class="form-control" id="message" placeholder="Enter Message" name="message"> </textarea>
+                                <label for="message" class="form-label">Message<span class="text-danger">*</span></label>
+                                <textarea type="message" class="form-control" id="message" placeholder="Enter Message"
+                                    name="message"> </textarea>
                                 @error('message')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
