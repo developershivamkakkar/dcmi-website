@@ -16,7 +16,7 @@
                     <p class="footer-cta-subtitle mb-0">Book a campus visit and experience the DCMI difference.</p>
                 </div>
                 <div class="d-flex gap-2 gap-md-3 justify-content-center" style="flex-wrap: wrap;">
-                    <a href="{{ config('site.admissions_url') }}" target="_blank" rel="noopener noreferrer"
+                    <a href="{{ config('site.admissions_url') ?: (config('site.registration_url') ?: (config('site.enquiry_url') ?: route('admissions.landing.get'))) }}" target="_blank" rel="noopener noreferrer"
                        class="btn footer-cta-btn-primary">
                         <i class="fas fa-pen-to-square me-2"></i>Apply Now
                     </a>
@@ -136,7 +136,7 @@
             <div class="col-12 col-sm-6 col-lg-2">
                 <h6 class="footer-heading">Admissions</h6>
                 <ul class="footer-links mb-4">
-                    <li><a href="{{ config('site.admissions_url') }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-chevron-right"></i>Admission Enquiry</a></li>
+                    <li><a href="{{ config('site.enquiry_url') ?: (config('site.admissions_url') ?: route('admissions.landing.get')) }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-chevron-right"></i>Admission Enquiry</a></li>
                     <li><a href="{{ route('resource-list') }}"><i class="fas fa-chevron-right"></i>Resource List</a></li>
                     <li><a href="{{ config('site.brochure_url') }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-chevron-right"></i>Download Brochure</a></li>
                 </ul>

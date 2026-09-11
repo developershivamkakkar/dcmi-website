@@ -326,7 +326,7 @@ The school aims to nurture confident, responsible and future-ready learners equi
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <a href="https://dcmi.dcmgroupofschools.com/admissions" class="hlt-card">
+                    <a href="{{ config('site.enquiry_url') ?: (config('site.admissions_url') ?: 'https://dcmi.dcmgroupofschools.com/admissions') }}" class="hlt-card">
                         <div class="hlt-card-top-bar"></div>
                         <div class="hlt-card-body">
                             <div class="hlt-card-icon-wrap">
