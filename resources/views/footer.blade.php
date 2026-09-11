@@ -13,7 +13,7 @@
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
                 <div>
                     <h5 class="footer-cta-title mb-1">Ready to Join {{ config('site.name') }}?</h5>
-                    <p class="footer-cta-subtitle mb-0">Book a campus visit and experience the DCMP difference.</p>
+                    <p class="footer-cta-subtitle mb-0">Book a campus visit and experience the DCMI difference.</p>
                 </div>
                 <div class="d-flex gap-2 gap-md-3 justify-content-center" style="flex-wrap: wrap;">
                     <a href="{{ config('site.admissions_url') }}" target="_blank" rel="noopener noreferrer"
@@ -35,8 +35,9 @@
             {{-- Column 1: Brand + Contact --}}
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="footer-logo-wrap">
-                    <img src="{{ asset(config('site.logo_icon')) }}" alt="{{ config('site.name') }} Logo"
-                         width="160" height="60" loading="lazy">
+                    <a href="{{ route('home.get') }}">
+                        <img src="{{ asset(config('site.logo') ?? config('site.logo_icon')) }}" alt="{{ config('site.name') }} Logo" class="img-fluid" loading="lazy">
+                    </a>
                 </div>
                 <p class="footer-tagline">{{ config('site.tagline') }}</p>
 

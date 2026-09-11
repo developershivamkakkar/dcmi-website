@@ -8,10 +8,7 @@
 
 @section('content')
 
-    <a href="https://api.whatsapp.com/send/?phone=9115992924&text=Hello%20Dass%20and%20Brown%20Experiential%20Learning%20School&type=phone_number&app_absent=0"
-        class="whatsapp-button" target="_blank">
-        <i class="fab fa-whatsapp"></i> Contact Us
-    </a>
+    @include('components.whatsapp-button')
 
 
     <div class="page-hero">
@@ -35,9 +32,9 @@
         <div class="row g-3">
             @foreach ($album->images as $index => $image)
                 <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="{{ ($index % 6) * 60 }}">
-                    <a data-fancybox="gallery" href="{{ asset('storage/' . $image->album_image_path) }}"
+                    <a data-fancybox="gallery" href="{{ Storage::url($image->album_image_path) }}"
                         class="gallery-photo-wrap d-block overflow-hidden rounded-3 shadow-sm">
-                        <img src="{{ asset('storage/' . $image->album_image_path) }}"
+                        <img src="{{ Storage::url($image->album_image_path) }}"
                             alt="Photo {{ $index + 1 }}" loading="lazy"
                             class="gallery-photo-img w-100">
                     </a>
