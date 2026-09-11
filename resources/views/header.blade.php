@@ -92,7 +92,7 @@
                 <a class="nav-link" href="{{ route('testimonials.get') }}">Opinion That Matters</a>
             </li>
             <li class="nav-item ms-2">
-                <a class="nav-link header-apply-btn" href="{{ route('admissions.landing.get') }}">Apply Now</a>
+                <a class="nav-link header-apply-btn" href="{{ config('site.admissions_url') ?: (config('site.registration_url') ?: route('admissions.landing.get')) }}" {{ (config('site.admissions_url') || config('site.registration_url')) ? 'target="_blank" rel="noopener noreferrer"' : '' }}>Apply Now</a>
             </li>
         </ul>
     </div>
@@ -244,7 +244,7 @@
 
                 {{-- CTA --}}
                 <div class="mob-sidebar-cta">
-                    <a href="{{ route('admissions.landing.get') }}" class="mob-cta-apply">Apply Now</a>
+                    <a href="{{ config('site.admissions_url') ?: (config('site.registration_url') ?: route('admissions.landing.get')) }}" class="mob-cta-apply" {{ (config('site.admissions_url') || config('site.registration_url')) ? 'target="_blank" rel="noopener noreferrer"' : '' }}>Apply Now</a>
                     <a href="{{ config('site.brochure_url') }}" class="mob-cta-brochure"
                         target="_blank">Brochure</a>
                 </div>
