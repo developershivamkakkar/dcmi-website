@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Best School in Ferozepur | Top School in Ferozepur City – DCM International School (DCMI)')
+@section('title', 'DCM International School (DCMI) - Best School in Ferozepur')
 
 @section('meta-description',
-    'DCM International School (DCMI) is recognised as the Best School in Ferozepur & Top School in Ferozepur City. Top CBSE education with modern infrastructure, innovation labs, and holistic student development.')
+    '')
+
 
 @section('meta-keywords',
-    'Best School in Ferozepur, Top School in Ferozepur City, Best CBSE School in Ferozepur, Top CBSE School in Ferozepur City, Best School in Ferozepur City, DCM International School, DCMI Ferozepur, Top Rated School in Ferozepur, Best School for Admissions Ferozepur, CBSE School Ferozepur City')
+    'DCM Presidency School, DCMP, Best School in Ludhiana, Top School in Ludhiana, CBSE School in Ludhiana, Cambridge International School in Ludhiana, Experiential Learning School, Future-Ready Learning, Innovative Education, Holistic Development, Advanced Labs and Facilities, Award-Winning School, Global Exposure for Students')
 
 @section('content')
 
@@ -56,7 +57,11 @@
 
 
     <!-- Floating WhatsApp Button -->
-    @include('components.whatsapp-button')
+    <a href="https://api.whatsapp.com/send/?phone=9115992924&text=Hello%20Dass%20and%20Brown%20Experiential%20Learning%20School&type=phone_number&app_absent=0"
+        class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Contact Us
+    </a>
 
 
     {{-- Success Modal --}}
@@ -97,7 +102,7 @@
     <!--                <form method="POST" action="{{ route('contact.store') }}" enctype="multipart/form-data">-->
     <!--                    @csrf-->
     <!--                    <div class="text-center">-->
-    <!--                        <img class="rounded" src="{{ asset('storage/assets/dcmi-main-logo.png') }}" alt="dcmi-logo"-->
+    <!--                        <img class="rounded" src="{{ asset('storage/assets/dcmp-logo.png') }}" alt="dbels-logo"-->
     <!--                            style="width:100px;height:100px; background-color:#ffffff00; object-fit:contain;">-->
     <!--                    </div>-->
     <!--                    <div class="mb-2 mt-1">-->
@@ -257,7 +262,7 @@
                     <div class="row">
                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 d-flex justify-content-center align-items-center">
                             <img loading="lazy" class="pb-md-4 pb-sm-4 pb-4 explore-logo"
-                                src="{{ asset('storage/assets/dcm-logo.jpg') }}" alt="DCM Group Logo">
+                                src="{{ asset('storage/assets/dcm-logo.jpg') }}" alt="dcmp-logo">
                         </div>
                         <div class="col-9 col-sm-9 col-md-9 col-lg-9" data-aos="fade-up" data-aos-delay="400">
                             <h2 class="explore-potential-heading mb-4">
@@ -346,7 +351,7 @@ The school aims to nurture confident, responsible and future-ready learners equi
                                 <img src="{{ asset('storage/assets/facilities-images/blogs.png') }}" alt="blog" loading="lazy">
                             </div>
                             <h3 class="hlt-card-title">Blogs</h3>
-                            <p class="hlt-card-desc">Insights, stories and the latest news from the DCMI community.</p>
+                            <p class="hlt-card-desc">Insights, stories and the latest news from the DCMP community.</p>
                             <span class="hlt-card-cta">Read Blogs <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>

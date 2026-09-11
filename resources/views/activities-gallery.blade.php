@@ -33,7 +33,7 @@
                         <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="{{ ($index % 6) * 80 }}">
                             <a href="{{ route('activities.images.show', $album->id) }}" class="gallery-album-card">
                                 <div class="gallery-album-img-wrap">
-                                    <img src="{{ Storage::url($album->images->first()->album_image_path) }}"
+                                    <img src="{{ asset('storage/' . $album->images->first()->album_image_path) }}"
                                         alt="{{ $album->album_name }}" loading="lazy" class="gallery-album-img">
                                     <div class="gallery-album-overlay">
                                         <i class="fas fa-images gallery-album-icon"></i>

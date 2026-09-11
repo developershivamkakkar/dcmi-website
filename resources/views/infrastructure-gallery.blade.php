@@ -7,7 +7,10 @@
 
 @section('content')
 
-    @include('components.whatsapp-button')
+    <a href="https://api.whatsapp.com/send/?phone=9115992924&text=Hello%20Dass%20and%20Brown%20Experiential%20Learning%20School&type=phone_number&app_absent=0"
+        class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i> Contact Us
+    </a>
 
 
     <div class="page-hero">
@@ -36,7 +39,7 @@
                         <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="{{ ($index % 6) * 80 }}">
                             <a href="{{ route('infra.images.show', $album->id) }}" class="gallery-album-card">
                                 <div class="gallery-album-img-wrap">
-                                    <img src="{{ Storage::url($album->images->first()->album_image_path) }}"
+                                    <img src="{{ asset('storage/' . $album->images->first()->album_image_path) }}"
                                         alt="{{ $album->album_name }}" loading="lazy" class="gallery-album-img">
                                     <div class="gallery-album-overlay">
                                         <i class="fas fa-images gallery-album-icon"></i>

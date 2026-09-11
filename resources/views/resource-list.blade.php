@@ -1,9 +1,12 @@
 @extends('layouts.app')
-@section('title', 'DCMI-RESOURCE-LIST')
+@section('title', 'DCMP-RESOURCE-LIST')
 @section('content')
 
     <!-- Floating WhatsApp Button -->
-    @include('components.whatsapp-button')
+    <a href="https://wa.me/9115800214" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Contact Us
+    </a>
 
 
 

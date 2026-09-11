@@ -3,7 +3,9 @@
 @section('content')
 
     <!-- Floating WhatsApp Button -->
-    @include('components.whatsapp-button')
+    <a href="https://wa.me/6284058009" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i> Contact Us
+    </a>
 
     
 

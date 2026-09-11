@@ -128,7 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 @section('content')
 
-@include('components.whatsapp-button')
+<a href="https://wa.me/6284058009" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i> Contact Us
+</a>
 
 
 {{-- Page Hero Banner --}}
@@ -214,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="bg-white rounded-3 shadow-sm p-4">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h5 class="fw-bold mb-0" style="color:#052A56; font-size:15px;">
-                            <i class="fab fa-youtube me-2"></i>DCMI Walkthrough
+                            <i class="fab fa-youtube me-2"></i>DCMP Walkthrough
                         </h5>
                         {{-- <a class="text-decoration-none small fw-semibold link-orange" target="_blank"
                            href="https://www.youtube.com/@dbelschd">See more</a> --}}

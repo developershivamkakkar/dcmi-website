@@ -213,8 +213,8 @@
         <div class="login-card">
 
             <div class="logo-wrap">
-                <img src="{{ asset(config('site.logo', 'storage/assets/dcmi-main-logo.png')) }}" alt="DCMI Logo">
-                <h1>DCMI Admin</h1>
+                <img src="{{ asset('storage/assets/dcm-logo.jpg') }}" alt="DCMI Logo">
+                <h1>DCMP Admin</h1>
                 <p>Sign in to your account</p>
             </div>
 

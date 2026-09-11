@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Mandatory Disclosure DCMI')
+@section('title', 'Mandatory Disclosure DCMP')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/pages/show.css') }}">

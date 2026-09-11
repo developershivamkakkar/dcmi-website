@@ -12,10 +12,7 @@ class FrontendGalleryController extends Controller
 {
     public function school_events(Request $request)
     {
-        $albums = Album::whereIn('album_parent_menu', ['School Events', 'Activities', 'Events & Activities', 'Events'])
-            ->with('images')
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $albums = Album::where('album_parent_menu', 'School Events')->with('images')->get();
         return view('school-events-gallery', compact('albums'));
     }
 
@@ -31,10 +28,7 @@ class FrontendGalleryController extends Controller
 
     public function infrastructure()
     {
-        $albums = Album::whereIn('album_parent_menu', ['Infrastructure', 'Infrastructure Gallery'])
-            ->with('images')
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $albums = Album::where('album_parent_menu', 'Infrastructure')->with('images')->get();
         return view('infrastructure-gallery', compact('albums'));
     }
 
@@ -50,10 +44,7 @@ class FrontendGalleryController extends Controller
 
     public function activities()
     {
-        $albums = Album::whereIn('album_parent_menu', ['Activities', 'School Events', 'Events & Activities', 'Events'])
-            ->with('images')
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $albums = Album::where('album_parent_menu', 'Activities')->with('images')->get();
         return view('activities-gallery', compact('albums'));
     }
 
@@ -69,10 +60,7 @@ class FrontendGalleryController extends Controller
 
     public function news_clippings()
     {
-        $albums = Album::whereIn('album_parent_menu', ['News Clippings', 'News & Media', 'News'])
-            ->with('images')
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $albums = Album::where('album_parent_menu', 'News Clippings')->with('images')->get();
         return view('news-clippings', compact('albums'));
     }
 
@@ -88,10 +76,7 @@ class FrontendGalleryController extends Controller
 
     public function annual_functions()
     {
-        $albums = Album::whereIn('album_parent_menu', ['Annual Functions', 'Annual Function', 'Functions'])
-            ->with('images')
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $albums = Album::where('album_parent_menu', 'Annual Functions')->with('images')->get();
         return view('annual-functions-gallery', compact('albums'));
     }
 

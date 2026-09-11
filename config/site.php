@@ -38,7 +38,7 @@ return [
     'phone'            => '01632-229797',
     'email_admissions' => 'dcmodelinternational2003@gmail.com',
     'email_info'       => 'info@dcminternationalschool.org',
-    'whatsapp'         => '9115992917',
+    'whatsapp'         => '+9115992917',
 
     // -- Social Media ----------------------------------------------------------
     'social' => [
@@ -61,18 +61,18 @@ return [
     'color_accent'    => '#BFA2CA',
 
     // -- SEO: Site-wide defaults -----------------------------------------------
-    'meta_description' => 'DCM International School (DCMI), Ferozepur – Recognized as the Best School in Ferozepur and Top School in Ferozepur City. Offering premier CBSE education, smart technology, sports, and holistic development.',
+    'meta_description' => 'DCM International School in Ferozepur – A leading CBSE school offering innovative education with advanced labs, technology integration, and holistic development for students.',
 
-    'meta_keywords' => 'Best School in Ferozepur, Top School in Ferozepur City, Best CBSE School in Ferozepur, Top CBSE School in Ferozepur City, Best School in Ferozepur City, DCM International School, DCMI Ferozepur, Top Rated School in Ferozepur, Best School for Admissions Ferozepur, CBSE School Ferozepur City',
+    'meta_keywords' => 'DCM International School, DCMI Ferozepur, Best School in Ferozepur, CBSE School, Top Schools Ferozepur, School with Labs, Innovative School, Experiential Learning',
 
     // -- SEO: Per-Page Configuration -------------------------------------------
     // Route name => [title, description, keywords, og_type, robots]
     // Fallback to site defaults if not specified here.
     'pages' => [
         'home.get' => [
-            'title'       => 'Best School in Ferozepur | Top School in Ferozepur City – DCM International School (DCMI)',
-            'description' => 'DCM International School (DCMI) is recognised as the Best School in Ferozepur & Top School in Ferozepur City. Top CBSE education with modern infrastructure, innovation labs, and holistic student development.',
-            'keywords'    => 'Best School in Ferozepur, Top School in Ferozepur City, Best CBSE School in Ferozepur, Top CBSE School in Ferozepur City, Best School in Ferozepur City, DCM International School, DCMI Ferozepur, Best School for Admissions Ferozepur, CBSE School Ferozepur City',
+            'title'       => 'DCM International School (DCMI) – Leading CBSE School in Ferozepur',
+            'description' => 'DCM International School is a premier CBSE school in Ferozepur offering cutting-edge education with advanced technology, innovation labs, sports, and holistic development.',
+            'keywords'    => 'DCM International School Ferozepur, DCMI, Best CBSE School, Top School in Ferozepur, Smart School, Technology Integrated School',
             'og_type'     => 'website',
             'robots'      => 'index, follow',
         ],

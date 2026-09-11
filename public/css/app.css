@@ -1320,11 +1320,7 @@ main.hero-page { padding-top: 0; }
 
 .announcements-text {
     font-family: "Poppins", sans-serif;
-    color: var(--color-text-white);
-}
-
-.announcements-text a {
-    color: var(--color-text-white);
+    color: var(--color-text-dark);
 }
 
 .contact-form {
@@ -2861,10 +2857,8 @@ main.hero-page { padding-top: 0; }
 }
 
 .footer-logo-wrap img {
-    max-height: 65px;
-    height: auto;
+    height: 70px;
     width: auto;
-    max-width: 100%;
     object-fit: contain;
     display: block;
 }

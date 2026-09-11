@@ -117,8 +117,8 @@
                             enctype="multipart/form-data">
                             @csrf
                             <div class="text-center">
-                                <img class="rounded contact-logo" src="{{ asset('storage/assets/dcmi-main-logo.png') }}"
-                                    alt="dcmi-logo">
+                                <img class="rounded contact-logo" src="{{ asset('storage/assets/dcmp-logo.png') }}"
+                                    alt="dcmp-logo">
                             </div>
                             <div class="mb-2 mt-1">
                                 <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
