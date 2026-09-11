@@ -19,7 +19,7 @@ return new class extends Migration
         // Seed defaults from config/site.php so the table is usable immediately
         $defaults = [
             // General
-            'site_name'          => config('site.name',      'DCM Presidency School'),
+            'site_name'          => config('site.name',      'DCM International School'),
             'site_full_name'     => config('site.full_name', ''),
             'site_tagline'       => config('site.tagline',   ''),
 
@@ -48,8 +48,8 @@ return new class extends Migration
             'google_tag_manager_id'   => config('site.google_tag_manager',  ''),
 
             // SEO
-            'meta_description'   => 'DCM Presidency School Ludhiana - Premier educational institution offering world-class education with focus on academic excellence and holistic development.',
-            'meta_keywords'      => 'DCM Presidency School, School in Ludhiana, Best School Ludhiana, CBSE School Ludhiana, Top Schools Punjab, Quality Education, Holistic Development',
+            'meta_description'   => 'DCM International School (DCMI), Ferozepur – Recognized as the Best School in Ferozepur and Top School in Ferozepur City. Offering premier CBSE education, smart technology, sports, and holistic development.',
+            'meta_keywords'      => 'Best School in Ferozepur, Top School in Ferozepur City, Best CBSE School in Ferozepur, Top CBSE School in Ferozepur City, Best School in Ferozepur City, DCM International School, DCMI Ferozepur, Top Rated School in Ferozepur, Best School for Admissions Ferozepur, CBSE School Ferozepur City',
 
             // Admissions
             'admissions_url'     => config('site.admissions_url', ''),

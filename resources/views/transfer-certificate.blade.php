@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Transfer Certificate – DBELS')
+@section('title', 'Transfer Certificate – DCMI')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/pages/show.css') }}">
@@ -8,10 +8,7 @@
 @section('content')
 
     {{-- Floating WhatsApp --}}
-    <a href="https://api.whatsapp.com/send/?phone={{ config('site.whatsapp') }}&text=Hello%20Dass%20and%20Brown%20Experiential%20Learning%20School&type=phone_number&app_absent=0"
-       class="whatsapp-button" target="_blank">
-        <i class="fab fa-whatsapp"></i> Contact Us
-    </a>
+    @include('components.whatsapp-button')
 
     {{-- Page Hero --}}
     <div class="page-hero">
