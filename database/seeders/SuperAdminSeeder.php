@@ -60,6 +60,7 @@ class SuperAdminSeeder extends Seeder
             'module-mandatory-disclosure',
             'module-manage-menu-items',
             'module-menu-delete',
+            'menu-delete',
             'module-manage-learning-partners',
             'module-member-delete',
             'module-page-editor',

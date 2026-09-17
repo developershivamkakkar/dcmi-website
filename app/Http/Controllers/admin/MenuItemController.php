@@ -12,7 +12,7 @@ class MenuItemController extends Controller
     public function __construct()
     {
         $this->middleware('permission:module-manage-menu-items', ['only' => ['index', 'store', 'update', 'reorder']]);
-        $this->middleware('permission:module-menu-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:module-menu-delete|menu-delete', ['only' => ['destroy']]);
     }
 
     public function index()
@@ -80,8 +80,9 @@ class MenuItemController extends Controller
 
     public function destroy(MenuItem $menuItem)
     {
-        // Explicit permission check using Facade
-        if (!auth('web')->check() || !auth('web')->user()->hasPermissionTo('module-menu-delete')) {
+        // Explicit permission check using Facade (supports both module-menu-delete and menu-delete)
+        $user = auth('web')->user();
+        if (!$user || (!$user->hasPermissionTo('module-menu-delete') && !$user->hasPermissionTo('menu-delete'))) {
             abort(403, 'Unauthorized action.');
         }
 

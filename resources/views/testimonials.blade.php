@@ -7,62 +7,7 @@
 <link rel="stylesheet" href="{{ asset('css/pages/show.css') }}">
 <style>
     /* ── Hero ──────────────────────────────────────────────────────── */
-    .testimonials-hero {
-        position: relative;
-        background: linear-gradient(135deg, var(--color-primary, #052A56) 0%, #031D3D 60%, #00A859 100%);
-        padding: 80px 0 100px;
-        text-align: center;
-        color: #fff;
-        overflow: hidden;
-    }
-    /* decorative background circles */
-    .testimonials-hero::before,
-    .testimonials-hero::after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        opacity: .08;
-        background: #fff;
-        pointer-events: none;
-    }
-    .testimonials-hero::before {
-        width: 420px; height: 420px;
-        top: -120px; left: -100px;
-    }
-    .testimonials-hero::after {
-        width: 300px; height: 300px;
-        bottom: 30px; right: -80px;
-    }
-    .testimonials-hero h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(2rem, 5vw, 3.2rem);
-        font-weight: 800;
-        letter-spacing: -.01em;
-        margin-bottom: 12px;
-        color: #fff;
-        position: relative;
-    }
-    .testimonials-hero p {
-        font-size: 1.08rem;
-        color: rgba(255,255,255,.88);
-        max-width: 540px;
-        margin: 0 auto;
-        position: relative;
-    }
-    /* wave divider */
-    .hero-wave {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        line-height: 0;
-        overflow: hidden;
-    }
-    .hero-wave svg {
-        display: block;
-        width: 100%;
-        height: 60px;
-    }
+    /* Using standard page-hero styling from show.css */
 
     /* ── Section wrapper ───────────────────────────────────────────── */
     .testimonials-section { padding: 70px 0 80px; background: #fafafa; }
@@ -71,9 +16,9 @@
     .filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 44px; }
     .filter-tabs button {
         padding: 7px 20px;
-        border: 2px solid var(--color-primary, #8c0305);
+        border: 2px solid var(--color-primary);
         background: transparent;
-        color: var(--color-primary, #8c0305);
+        color: var(--color-primary);
         border-radius: 50px;
         font-size: .85rem;
         font-weight: 600;
@@ -82,7 +27,7 @@
     }
     .filter-tabs button.active,
     .filter-tabs button:hover {
-        background: var(--color-primary, #8c0305);
+        background: var(--color-primary);
         color: #fff;
     }
 
@@ -215,18 +160,23 @@
 
 @section('content')
 
-    {{-- Hero --}}
-    <section class="testimonials-hero">
-        <div class="container" style="position:relative;z-index:1;">
-            <h1 data-aos="fade-up">Opinion That Matters</h1>
-            <p data-aos="fade-up" data-aos-delay="80">Hear directly from the families and students who are part of the {{ config('site.name') }} community.</p>
+    {{-- Page Hero Banner --}}
+    <div class="page-hero">
+        <div class="page-hero-blob page-hero-blob-1"></div>
+        <div class="page-hero-blob page-hero-blob-2"></div>
+        <div class="page-hero-content">
+            <h1 class="page-hero-title" data-aos="fade-up">Opinion That Matters</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="120">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="{{ route('home.get') }}"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Opinion That Matters</li>
+                </ol>
+            </nav>
         </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="#fafafa"/>
-            </svg>
+        <div class="page-hero-wave">
+            <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,28 C360,56 1080,0 1440,28 L1440,56 L0,56 Z" fill="#fafafa"/></svg>
         </div>
-    </section>
+    </div>
 
     {{-- Testimonials --}}
     <section class="testimonials-section">

@@ -107,7 +107,7 @@
 /* Animated gradient accent bar */
 .page-content-accent-bar {
     height: 5px;
-    background: linear-gradient(90deg, #E31E25, var(--brand-purple), #E31E25);
+    background: linear-gradient(90deg, var(--color-primary), var(--brand-golden), var(--color-primary));
     background-size: 200% 100%;
     animation: accentSlide 4s linear infinite;
 }
@@ -231,7 +231,7 @@
 }
 .page-content-body table th,
 .page-content-body figure.table table th {
-    background-color: var(--color-primary, #E31E25) !important;
+    background-color: var(--color-primary) !important;
     color: var(--color-text-white) !important;
     font-weight: 600;
     padding: 13px 16px;
