@@ -300,6 +300,7 @@
         </div>{{-- /row --}}
     </div>{{-- /container --}}
 </section>
+@endsection
 
 @section('scripts')
 <script>

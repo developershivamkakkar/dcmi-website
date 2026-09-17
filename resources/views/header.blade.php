@@ -86,7 +86,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('show.page', ['slug' => 'faq']) }}">FAQs</a>
+                <a class="nav-link" href="{{ route('faq.get') }}">FAQs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('testimonials.get') }}">Opinion That Matters</a>
