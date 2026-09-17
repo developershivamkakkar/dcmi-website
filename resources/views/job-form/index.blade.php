@@ -288,7 +288,10 @@
                                     <input type="text" id="name" name="name"
                                            class="cf-input @error('name') is-invalid @enderror"
                                            value="{{ old('name') }}"
-                                           placeholder="e.g. Priya Sharma" required>
+                                           placeholder="e.g. Priya Sharma"
+                                           pattern="^[a-zA-Z\s\.\'-]+$"
+                                           maxlength="100"
+                                           required>
                                     @error('name')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
                                 <div class="col-sm-6">
@@ -296,7 +299,9 @@
                                     <input type="email" id="email" name="email"
                                            class="cf-input @error('email') is-invalid @enderror"
                                            value="{{ old('email') }}"
-                                           placeholder="you@example.com" required>
+                                           placeholder="you@example.com"
+                                           maxlength="255"
+                                           required>
                                     @error('email')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
                                 <div class="col-sm-6">
@@ -304,7 +309,10 @@
                                     <input type="tel" id="phone_number" name="phone_number"
                                            class="cf-input @error('phone_number') is-invalid @enderror"
                                            value="{{ old('phone_number') }}"
-                                           placeholder="+91 98765 43210" required>
+                                           placeholder="e.g. 9876543210"
+                                           maxlength="15"
+                                           required>
+                                    <div id="phone-js-error" class="cf-error d-none"><i class="fas fa-exclamation-circle"></i><span>Please enter a valid 10 to 15 digit phone number.</span></div>
                                     @error('phone_number')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
                                 <div class="col-sm-6">
@@ -312,7 +320,9 @@
                                     <input type="text" id="qualification" name="qualification"
                                            class="cf-input @error('qualification') is-invalid @enderror"
                                            value="{{ old('qualification') }}"
-                                           placeholder="e.g. M.Sc., B.Ed." required>
+                                           placeholder="e.g. M.Sc., B.Ed."
+                                           maxlength="255"
+                                           required>
                                     @error('qualification')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
                             </div>
@@ -327,7 +337,9 @@
                                     <input type="text" id="position_applied" name="position_applied"
                                            class="cf-input @error('position_applied') is-invalid @enderror"
                                            value="{{ old('position_applied') }}"
-                                           placeholder="e.g. Science Teacher, Administrative Staff" required>
+                                           placeholder="e.g. Science Teacher, Administrative Staff"
+                                           maxlength="255"
+                                           required>
                                     @error('position_applied')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
                                 <div class="col-12">
@@ -335,6 +347,7 @@
                                     <textarea id="message" name="message" rows="5"
                                               class="cf-input @error('message') is-invalid @enderror"
                                               placeholder="Briefly describe your experience and why you'd like to join us…"
+                                              maxlength="3000"
                                               required>{{ old('message') }}</textarea>
                                     @error('message')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
@@ -345,7 +358,7 @@
                                     </label>
                                     <input type="file" id="resume_file" name="resume_file"
                                            class="cf-input @error('resume_file') is-invalid @enderror"
-                                           accept=".pdf">
+                                           accept="application/pdf,.pdf">
                                     <p class="cf-file-hint"><i class="fas fa-file-pdf me-1"></i>Accepted format: PDF · Max size: 5 MB</p>
                                     @error('resume_file')<div class="cf-error"><i class="fas fa-exclamation-circle"></i>{{ $message }}</div>@enderror
                                 </div>
@@ -371,4 +384,40 @@
     </div>{{-- /container --}}
 </section>
 
+@section('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const phoneInput = document.getElementById('phone_number');
+    const phoneError = document.getElementById('phone-js-error');
+    const form = phoneInput ? phoneInput.closest('form') : null;
+
+    if (phoneInput) {
+        // Restrict input in real-time to numbers, plus, hyphens, and spaces only
+        phoneInput.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9\+\-\s\(\)]/g, '');
+
+            const digitsOnly = this.value.replace(/\D/g, '');
+            if (this.value.length > 0 && (digitsOnly.length < 10 || digitsOnly.length > 15)) {
+                this.classList.add('is-invalid');
+                phoneError.classList.remove('d-none');
+            } else {
+                this.classList.remove('is-invalid');
+                phoneError.classList.add('d-none');
+            }
+        });
+    }
+
+    if (form && phoneInput) {
+        form.addEventListener('submit', function (e) {
+            const digitsOnly = phoneInput.value.replace(/\D/g, '');
+            if (digitsOnly.length < 10 || digitsOnly.length > 15) {
+                e.preventDefault();
+                phoneInput.classList.add('is-invalid');
+                phoneError.classList.remove('d-none');
+                phoneInput.focus();
+            }
+        });
+    }
+});
+</script>
 @endsection
