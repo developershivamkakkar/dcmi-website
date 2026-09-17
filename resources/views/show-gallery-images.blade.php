@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '{{ $album->album_name }} – Gallery')
+@section('title', $album->album_name . ' – Gallery | ' . config('site.full_name'))
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/pages/show.css') }}">
