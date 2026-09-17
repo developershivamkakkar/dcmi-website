@@ -4,81 +4,8 @@
 @section('meta-description', 'Explore career opportunities at ' . config('site.full_name') . '. Submit your job application and become part of our team.')
 
 @section('styles')
+<link rel="stylesheet" href="{{ asset('css/pages/show.css') }}">
 <style>
-/* ── Hero ──────────────────────────────────────────────────────────── */
-.careers-hero {
-    position: relative;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 60%, var(--color-secondary) 100%);
-    padding: 80px 0 100px;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-}
-.careers-hero::before,
-.careers-hero::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    opacity: .08;
-    background: #fff;
-    pointer-events: none;
-}
-.careers-hero::before { width: 420px; height: 420px; top: -120px; left: -100px; }
-.careers-hero::after  { width: 300px; height: 300px; bottom: 30px; right: -80px; }
-.careers-hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 800;
-    letter-spacing: -.01em;
-    margin-bottom: 12px;
-    color: #fff;
-    position: relative;
-}
-.careers-hero p {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,.88);
-    max-width: 520px;
-    margin: 0 auto;
-    position: relative;
-}
-.hero-wave {
-    position: absolute;
-    bottom: -1px; left: 0;
-    width: 100%; line-height: 0; overflow: hidden;
-}
-.hero-wave svg { display: block; width: 100%; height: 60px; }
-
-/* ── Breadcrumb ────────────────────────────────────────────────────── */
-.careers-breadcrumb {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-}
-.careers-breadcrumb ol {
-    margin: 0; padding: 0;
-    list-style: none;
-    display: flex; align-items: center; gap: 6px;
-    font-size: .85rem;
-}
-.careers-breadcrumb ol li + li::before {
-    content: '/';
-    color: #bbb;
-    margin-right: 6px;
-}
-.careers-breadcrumb ol li a {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-.careers-breadcrumb ol li a:hover { text-decoration: underline; }
-.careers-breadcrumb ol li:last-child { color: #666; }
-
-/* ── Section wrapper ────────────────────────────────────────────────── */
-.careers-section {
-    padding: 64px 0 80px;
-    background: #f7f8fa;
-}
-
 /* ── Sidebar info card ──────────────────────────────────────────────── */
 .careers-info-card {
     background: #fff;
@@ -98,30 +25,23 @@
 }
 .careers-info-card .info-icon-box i { font-size: 24px; color: var(--color-primary); }
 .careers-info-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.35rem; font-weight: 700;
-    color: #1a1a2e; margin-bottom: 10px;
+    font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 12px;
 }
-.careers-info-card p { font-size: .9rem; color: #666; line-height: 1.7; margin-bottom: 24px; }
-.careers-perks { list-style: none; padding: 0; margin: 0 0 28px; }
+.careers-info-card p { font-size: .88rem; color: #666; line-height: 1.6; margin-bottom: 20px; }
+.careers-perks { list-style: none; padding: 0; margin: 0 0 24px; }
 .careers-perks li {
+    font-size: .85rem; color: #444; margin-bottom: 10px;
     display: flex; align-items: flex-start; gap: 10px;
-    font-size: .88rem; color: #444;
-    padding: 8px 0;
-    border-bottom: 1px solid #f2f2f2;
 }
-.careers-perks li:last-child { border-bottom: none; }
-.careers-perks li i { color: var(--color-primary); font-size: .9rem; margin-top: 2px; flex-shrink: 0; }
+.careers-perks li i { color: #2e7d32; font-size: 14px; margin-top: 3px; flex-shrink: 0; }
 .careers-contact-note {
-    background: linear-gradient(135deg, var(--color-primary-light), var(--color-bg-light));
-    border-left: 3px solid var(--color-primary);
-    border-radius: 0 10px 10px 0;
-    padding: 14px 16px;
-    font-size: .83rem; color: #555;
+    background: #f8f9fa; border-radius: 10px; padding: 14px 16px;
+    font-size: .82rem; color: #555; border-left: 3px solid var(--color-primary);
 }
 .careers-contact-note a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
+.careers-contact-note a:hover { text-decoration: underline; }
 
-/* ── Form card ─────────────────────────────────────────────────────── */
+/* ── Form Card ──────────────────────────────────────────────────────── */
 .careers-form-card {
     background: #fff;
     border-radius: 16px;
@@ -131,22 +51,25 @@
 }
 .careers-form-header {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    padding: 28px 32px; color: #fff;
+    padding: 28px 36px;
+    color: #fff;
 }
 .careers-form-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem; font-weight: 700;
-    margin-bottom: 4px; color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem; font-weight: 700; color: #fff; margin-bottom: 4px;
 }
-.careers-form-header p { font-size: .9rem; color: rgba(255,255,255,.82); margin: 0; }
-.careers-form-body { padding: 32px; }
+.careers-form-header p { font-size: .88rem; color: rgba(255,255,255,.8); margin: 0; }
 
-/* ── Form fields ───────────────────────────────────────────────────── */
-.cf-label { font-size: .83rem; font-weight: 600; color: #444; margin-bottom: 6px; display: block; }
-.cf-label span.req { color: var(--color-primary); margin-left: 2px; }
+/* ── Form Controls ──────────────────────────────────────────────────── */
+.careers-form-body { padding: 36px; }
+.cf-label {
+    font-size: .84rem; font-weight: 600; color: #333;
+    margin-bottom: 6px; display: block;
+}
+.cf-label .req { color: #dc3545; margin-left: 2px; }
 .cf-input {
     width: 100%;
-    padding: 11px 14px;
+    padding: 11px 16px;
     border: 1.5px solid #e0e0e0;
     border-radius: 10px;
     font-size: .92rem;
@@ -206,29 +129,23 @@
 
 @section('content')
 
-{{-- ── Hero ──────────────────────────────────────────────────────────── --}}
-<section class="careers-hero">
-    <div class="container position-relative">
-        <p class="mb-3" style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.65);">
-            <i class="fas fa-briefcase me-2"></i>We're Hiring
-        </p>
-        <h1>Join Our Team</h1>
-        <p>Be part of a community dedicated to shaping young minds. We welcome passionate educators and professionals.</p>
+{{-- ── Page Hero Banner ─────────────────────────────────────────────── --}}
+<div class="page-hero">
+    <div class="page-hero-blob page-hero-blob-1"></div>
+    <div class="page-hero-blob page-hero-blob-2"></div>
+    <div class="page-hero-content">
+        <h1 class="page-hero-title" data-aos="fade-up">Careers</h1>
+        <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="120">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{{ route('home.get') }}"><i class="fas fa-home me-1"></i>Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Careers</li>
+            </ol>
+        </nav>
     </div>
-    <div class="hero-wave">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#f7f8fa"/>
+    <div class="page-hero-wave">
+        <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,28 C360,56 1080,0 1440,28 L1440,56 L0,56 Z" fill="#f7f8fa"/>
         </svg>
-    </div>
-</section>
-
-{{-- ── Breadcrumb ────────────────────────────────────────────────────── --}}
-<div class="careers-breadcrumb">
-    <div class="container">
-        <ol>
-            <li><a href="{{ route('home.get') }}"><i class="fas fa-home me-1"></i>Home</a></li>
-            <li>Careers</li>
-        </ol>
     </div>
 </div>
 
